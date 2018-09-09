@@ -13,7 +13,7 @@ echo mysql-server-5.6 mysql-server/root_password password $dbpass | debconf-set-
 echo mysql-server-5.6 mysql-server/root_password_again password $dbpass | debconf-set-selections
 
 # install the LAMP stack
-until apt-get -y install apache2 mysql-server php5 php5-mysql
+until apt-get -y install apache2 mysql-server php5 php5-mysql phpMyAdmin
 do
   echo "Try again"
   sleep 5
